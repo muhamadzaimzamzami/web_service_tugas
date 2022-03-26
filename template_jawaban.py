@@ -1,4 +1,5 @@
-
+#Muhamad Zaim Zamzami (19090036) user : 19090036, pass:19090036
+#Fatimatuzzahro (19090039) user 19090039, pass:19090039
 import os
 import random
 import string
