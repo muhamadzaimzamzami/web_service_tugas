@@ -26,7 +26,7 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=False, primary_key=False)
     token = db.Column(db.String(225), unique=True, nullable=True, primary_key=False)
 
-
+#curl -i -X 
 @app.route("api/v1/login", methods=["POST"])
 def login():
     req = request.json;
@@ -42,3 +42,14 @@ def login():
         return {"token": token}, 200
 
 
+@auth.verify_token
+def verify_token(token):
+  # ambil value token
+  # cari ke dalam table user, 
+  # return usernamenya
+
+# tulis command line CURL utk request end point ini lengkap dengan data body jsonnya
+@app.route("/api/v2/users/info", methods=["POST"])
+@auth.login_required
+def info()
+  # response-kan {"username": auth.current_user()}, http code: 200
